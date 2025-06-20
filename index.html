@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="heading">What Do You Have In Your Mind Today?</h1>
+        <p class="sub-head">Store your thoughts here</p>
+    </header>
+
+    <div class="container">
+        <div class="input-sec">
+        <input type="text" id="searchInput" class="inp" style="width: 90%; height: 40px; border-radius: 8px;" placeholder="  Search Notes">
+        <select id="options" class="opt" name="choice" style="width: 50px; height: 43px; border-radius: 8px;">
+            <option value="All" selected>All</option>
+            <option value="work">Work</option>
+            <option value="personal">Personal</option>
+            <option value="remainders">Remainders</option>
+            <option value="ideas">Ideas</option>
+            
+        </select>
+        <button class="add" style="width: 50px; height: 43px; border-radius: 8px;" > + Add</button>
+        </div>
+    </div>
+
+ 
+
+    
+
+  <!--TO CONTAIN THE NOTES-->
+  <div id="NotesContainer" class="notes-container"></div>
+
+  <div class="addModalClass" id="addModalClass">
+    <div class="modal-class">
+        <div id="header-newnote">
+            <h3 id="new-note">New Note</h3>
+            <button id="closeModalBtn">X</button>
+        </div>
+
+        <form id="noteform">
+            <div class="form-group">
+                <label for="title-heading">Title</label>
+                <input type="text" id="title-heading" required>
+            </div>
+            <div class="form-group">
+                <label for="content-heading">Content</label>
+                <textarea id="content-heading"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tags-heading">Tags</label>
+                <label><input type="radio" name="noteTag" value="work"> Work</label><br>
+                <label><input type="radio" name="noteTag" value="personal"> Personal</label><br>
+                <label><input type="radio" name="noteTag" value="ideas"> Ideas</label><br>
+                <label><input type="radio" name="noteTag" value="remainders"> Remainders</label>
+            </div>
+            <button type="submit" class="submit-btn">Save Note</button>
+        </form>
+    </div>
+
+  </div>
+ 
+
+
+
+    
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
